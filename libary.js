@@ -57,7 +57,7 @@ document.getElementById("button").onclick = function(e){
       let author = document.getElementById('author').value;
       let pages = document.getElementById('pages').value;
       //Validate The Form
-      if(title == "" || author == "" || !isNaN(pages)){
+      if(title == "" || author == "" || pages==""){
         alert("fill  form correctly");
         return false;
       }
