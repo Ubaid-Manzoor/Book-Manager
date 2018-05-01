@@ -32,7 +32,7 @@ function FetchBooks(){
                                         '  </div>'+
                                         ' <div class="row_2">'+
                                             '<main>'+
-                                              '<img src="#" alt="pic of book">'+
+                                              
                                            ' </main>'+
                                          ' </div>'+
                                           '<div class="row_3"> '+
@@ -66,7 +66,6 @@ document.getElementById("button").onclick = function(e){
       if(JSON.parse(localStorage.getItem('myLibrary')) === null){
           myLibrary = [];
           myLibrary.push(current_book);
-          console.log(nuulll);
           //push to sorage
         
         localStorage.setItem("myLibrary",JSON.stringify(myLibrary));
@@ -103,6 +102,11 @@ function DeleteBook(data_att){
          }
     }
     FetchBooks();
+}
+//Cancel Button on Form
+document.getElementsByClassName('form')[0].getElementsByClassName('cancle_button')[0].onclick =function(){
+  document.getElementsByClassName("form")[0].style.display = "none";
+  document.getElementsByClassName("form")[0].style.background = "rgba(0,0,0,0)";  
 }
 //Changing The Form properties on clicking the newButton 
       document.getElementById("btn2").onclick = function(){

@@ -27,11 +27,30 @@
 	-webkit-border-radius: $radius;
 	 border-radius: $radius;
 }
+@mixin Borderradius($top,$right,$bottom,$left){
+	-moz-border-radius: $top $right $bottom $left;
+	-ms-border-radius: $top $right $bottom $left;
+	-webkit-border-radius: $top $right $bottom $left;
+	 border-radius: $top $right $bottom $left;
+}
 @mixin StyleForm{
+	z-index:100;
 	width: 25%;
 	// margin: 0 auto;
-	background: #888;
+	background: #fff;
 	@include BorderRadius(5px);
+	.cancle_button{
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		background: #fff;
+		width: 20px;
+		height: 20px;
+		@include BorderRadius(50%);
+		text-align: center;
+		cursor: pointer;
+		font-family: 'Black And White Picture', sans-serif;
+	}
 	label{
 		display: block;
 		font-family: 'Gloria Hallelujah', cursive;
@@ -46,7 +65,7 @@
 		margin-left:1%;
 		margin-right: 1%;
 		@include BorderRadius(5px);
-		border:0;
+		border:1px solid #cbcbcb;
 	}
 	button{
 		font-family: 'Gloria Hallelujah', cursive;
@@ -56,15 +75,23 @@
 		@include BorderRadius(5px);
 		border:0;
 		cursor: pointer;
+		&:hover{
+			background: #000;
+			color: #fff;
+		}
 	}
 	.btn{
+		margin-top: 5px;
 		padding:3px;
+		background: #cbcbcb;
+		@include Borderradius(0,0 ,5px ,5px );
 	}
 	header{
+		position: relative;
 			h2{
 			text-align: center;
 			font-family: 'Gloria Hallelujah', cursive;
-			background: #adadad;
+			background: #cfcfcf;
 			height: 30px;
 			vertical-align: baseline;
 			-moz-border-radius: 5px 5px 0 0;
