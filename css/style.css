@@ -59,11 +59,8 @@ body, html {
   background: -webkit-linear-gradient(bottom, #0e0e0f, #2a2a2d);
   background: -o-linear-gradient(bottom, #0e0e0f, #2a2a2d);
   background: linear-gradient(0deg, #0e0e0f, #2a2a2d);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0; }
+  min-width: 100vw;
+  min-height: 100vh; }
   body .main_header, html .main_header {
     text-align: center;
     padding: 20px;
@@ -263,3 +260,24 @@ form {
   font-size: 25px; }
   #btn2:hover {
     color: #fff !important; }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em; } }
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em; } }

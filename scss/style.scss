@@ -8,11 +8,13 @@
 body,html{
 	// background: #1f1127;
 	background: linear-gradient(0deg, #0e0e0f, #2a2a2d);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
+	// position: absolute;
+	// top: 0;
+	// bottom: 0;
+	// right: 0;
+	// left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
 	.main_header{
 		text-align: center;
 		padding: 20px;
@@ -142,4 +144,21 @@ form{
 	font-family: 'Shadows Into Light', cursive;
 	font-weight: 600;
 	font-size: 25px;
+}
+
+//media query
+@media screen and (max-width:1000px){
+	.container {
+		@include MakeGrid(3,1.5em,1.5em);
+	}
+}
+@media screen and (max-width:768px){
+	.container {
+		@include MakeGrid(2,1.5em,1.5em);
+	}
+}
+@media screen and (max-width:500px){
+	.container {
+		@include MakeGrid(1,1.5em,1.5em);
+	}
 }
