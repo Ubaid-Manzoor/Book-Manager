@@ -35,12 +35,12 @@ body,html{
 	margin: 20px auto;
 	width: 80%;
 	header{
-		position: relative;
+		
 		div.cancle_button{
 			display: inline-block;
 			position: absolute;
-			top: 1px;
-			right: 1px;
+			top: 5px;
+			right: 5px;
 			width: 20px;
 			height: 20px;
 			@include BorderRadius(50%);
@@ -51,6 +51,7 @@ body,html{
 	}
 }
 .rows{
+	position: relative;
 	padding: 25px;
 	@include MakeGrid(1,0,0);
 	grid-auto-rows: minmax(50px,auto);
@@ -86,6 +87,8 @@ body,html{
 		footer{
 			p{
 				padding-top: 15px;
+				font-size: 20px;
+				font-weight: 600;
 			}
 		}
 		.left_footer{
@@ -133,4 +136,10 @@ form{
 }
 #btn2{
 	cursor: pointer;
+	&:hover{
+		color: #fff !important;
+	}
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: 600;
+	font-size: 25px;
 }

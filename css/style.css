@@ -81,24 +81,23 @@ body, html {
   grid-row-gap: 1.5em;
   margin: 20px auto;
   width: 80%; }
-  .container header {
-    position: relative; }
-    .container header div.cancle_button {
-      display: inline-block;
-      position: absolute;
-      top: 1px;
-      right: 1px;
-      width: 20px;
-      height: 20px;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      background: #c4f1ff;
-      cursor: pointer;
-      color: #000; }
+  .container header div.cancle_button {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #c4f1ff;
+    cursor: pointer;
+    color: #000; }
 
 .rows {
+  position: relative;
   padding: 25px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -141,7 +140,9 @@ body, html {
     background: #181c22;
     color: #fff; }
     .rows .row_3 footer p {
-      padding-top: 15px; }
+      padding-top: 15px;
+      font-size: 20px;
+      font-weight: 600; }
     .rows .row_3 .left_footer {
       height: 100%;
       border-right: 1px solid  #494951; }
@@ -256,4 +257,9 @@ form {
       padding-top: 5px; }
 
 #btn2 {
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 600;
+  font-size: 25px; }
+  #btn2:hover {
+    color: #fff !important; }
